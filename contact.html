@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main(login).html">Corinee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="main(login).html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="question.html">Question</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="answer.html">Answer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ranking.html">Ranking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mypage.html">My page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="main(logout).html">Logout</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class = "service_introduce" style="margin:100px;">
+        <p style="font-weight: bold; font-size: 20px;">문의</p><p></p>
+        <br>
+        <p>문의 글을 보내주시면 운영시간 내에 고객님의 이메일로 답변드리도록 하겠습니다.</p><p></p>
+        <p>서비스 지원 언어: Korean </p><p></p>
+        <p>서비스 운영시간: 9:00am to 6:00pm Monday to Friday.</p> <p></p>
+        <select  name="subjects">
+            <option value="1" selected>선택해주세요</option>
+            <option value="2">사이트 정보 오류</option>
+            <option value="3">멘티 신고</option>
+            <option value="4">멘토 신고</option>
+            <option value="5">기타</option>			
+        </select>
+        <p></p>
+
+        <form>
+            <textarea rows="5" cols="50" placeholder="문의 사항을 적어주세요."></textarea>
+            <p></p>
+            <input style = "margin-top: 10px;" type="submit" value="전송하기" onclick="func_submit()">
+
+
+        </form>
+    </div>
+        <script>
+            function func_submit()
+            {
+                alert("등록되었습니다");
+                window.location.href = "./main(login).html";
+            }
+        </script>
+</body>

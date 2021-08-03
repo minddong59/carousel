@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main(login).html">Corinee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="main(login).html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="question.html">Question</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="answer.html">Answer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ranking.html">Ranking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mypage.html">My page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="main(logout).html">Logout</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <form style="margin-top: 50px; margin-left: 50px;">
+    <h1>질문을 등록해주세요.</h1>
+    <div class="input-group mb-3" style="margin-top: 20px;">
+      <button id = "btn1" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">카테고리</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" id = "a1" >C language</a></li>
+        <li><a class="dropdown-item" id = "a2" href="#">python language</a></li>
+        <li><a class="dropdown-item" id = "a3" href="#">java language</a></li>
+        <li><hr class="dropdown-divicder"></li>
+        <li><a class="dropdown-item" href="#" id = "a4">기타</a></li>
+      </ul>
+      <input type="text" class="form-control" id = "check_input" aria-label="Text input with dropdown button">
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Title</label>
+      </div>
+    <div class="form-floating" style="margin-top: 20px; margin-bottom: 20px;">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Content</label>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" onclick="func1()">등록하기</button>
+    <input type="reset" class="btn btn-secondary btn-lg" value="다시작성">
+</form>
+    
+    
+  <script>
+    $("#a1").click(function(){
+      $('#check_input').val('C language');
+      $('#btn1').text('C language');   
+    })
+
+    $("#a2").click(function(){
+      $('#check_input').val('python language');
+      $('#btn1').text('python language');   
+   })
+
+    $("#a3").click(function(){
+      $('#check_input').val('java language');
+      $('#btn1').text('java language');   
+    })
+
+    $("#a4").click(function(){
+      $('#check_input').val('');
+      $('#btn1').text('기타');   
+    })
+    function func1()
+    {
+        alert("등록되었습니다");
+        window.location.href = "main(login).html";
+    }
+ </script>
+    
+
+</body>
